@@ -1,6 +1,6 @@
 import logoImg from '../assets/logo/logo.png';
 import heroImg from '../assets/hero/miss-zhang-jz0xIgcwyL0-unsplash.jpg';
-import aboutImg from '../assets/about/photographer.jpg';
+import aboutImg from '../assets/person/614147613_122264093144071016_954045062912724211_n.jpg';
 
 import p0 from '../assets/portfolio/Cultural/IMG_3917.JPG';
 import p1 from '../assets/portfolio/Cultural/IMG_3967.JPG';
