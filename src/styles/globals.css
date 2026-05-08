@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
-@theme {
-  /* Core palette */
+/*
+  @theme inline = Tailwind v4 uses hex values AS-IS.
+  Without "inline", Tailwind converts colors to oklch() which renders
+  differently in production (Vercel) vs localhost — causing faded/gray
+  backgrounds and muted gold colors.
+*/
+@theme inline {
+  /* Core palette — exact hex values, NO oklch conversion */
   --color-deep-black: #000000;
   --color-charcoal: #0E0E0E;
   --color-soft-black: #111111;
@@ -10,7 +16,7 @@
   --color-gold: #D6A84F;
   --color-gold-hover: #E8C878;
 
-  /* Gold aliases used in index.css */
+  /* Gold aliases */
   --color-gold-500: #c89b3c;
   --color-gold-400: #e6c46a;
   --color-gold-600: #b68a2e;
@@ -21,23 +27,22 @@
   --font-westeria: "Westeria", cursive;
 }
 
-@layer base {
-  html {
-    background-color: #000000 !important;
-  }
-  body {
-    background-color: #000000 !important;
-    color: var(--color-white);
-    font-family: var(--font-sans);
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-  }
+/* Force base backgrounds and text — hardcoded hex, not CSS variables,
+   so nothing in the Tailwind pipeline can remap them */
+html,
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Serif", serif;
+}
+
+/* Gold gradient helpers */
 .gold-gradient-bg {
   background: linear-gradient(135deg, #C89B3C, #E6C46A, #B68A2E);
 }
