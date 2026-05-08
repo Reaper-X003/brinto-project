@@ -36,9 +36,14 @@ export const Navbar = () => {
         <div 
           className={`transition-all duration-500 ease-in-out flex items-center justify-between w-full ${
             isScrolled 
-              ? 'max-w-[1000px] bg-[#050505]/75 backdrop-blur-[16px] border border-white/10 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] h-[64px] px-6 lg:px-8' 
-              : 'max-w-[1280px] bg-transparent h-[88px] px-5 md:px-8 lg:px-16 border-b border-transparent rounded-none'
+              ? 'max-w-[1000px] backdrop-blur-[16px] border border-white/10 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] h-[64px] px-6 lg:px-8' 
+              : 'max-w-[1280px] h-[88px] px-5 md:px-8 lg:px-16 border-b border-transparent rounded-none'
           }`}
+          style={{
+            backgroundColor: isScrolled
+              ? 'rgba(5, 5, 5, 0.75)'
+              : 'rgba(0, 0, 0, 0.2)',
+          }}
         >
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 z-50">
