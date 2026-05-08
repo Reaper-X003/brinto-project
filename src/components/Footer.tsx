@@ -39,13 +39,13 @@ export const Footer = () => {
             <h4 className="text-white font-serif font-semibold text-lg mb-6">Contact</h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="tel:+8801700000000" className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-2">
-                  <Phone size={14} /> +880 1700-000000
+                <a href="tel:0186407010" className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-2">
+                  <Phone size={14} /> 0186407010
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@washioubrinto.com" className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-2">
-                  <Mail size={14} /> contact@washioubrinto.com
+                <a href="mailto:washiour@gmail.com" className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-2">
+                  <Mail size={14} /> washiour@gmail.com
                 </a>
               </li>
             </ul>
@@ -55,10 +55,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-serif font-semibold text-lg mb-6">Follow</h4>
             <div className="flex items-center gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-soft-black flex items-center justify-center text-muted hover:text-deep-black hover:bg-gold transition-colors border border-white/10 hover:border-gold">
+              <a href="https://www.instagram.com/washiourahmanbrinto?igsh=MWs2NXFmcDFvdDF2dQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-soft-black flex items-center justify-center text-muted hover:text-deep-black hover:bg-gold transition-colors border border-white/10 hover:border-gold">
                 <Instagram size={18} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-soft-black flex items-center justify-center text-muted hover:text-deep-black hover:bg-gold transition-colors border border-white/10 hover:border-gold">
+              <a href="https://www.facebook.com/share/1J6BLzX46P/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-soft-black flex items-center justify-center text-muted hover:text-deep-black hover:bg-gold transition-colors border border-white/10 hover:border-gold">
                 <Facebook size={18} />
               </a>
             </div>
