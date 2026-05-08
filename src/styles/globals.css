@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 /*
-  @theme inline = Tailwind v4 uses hex values AS-IS.
-  Without "inline", Tailwind converts colors to oklch() which renders
-  differently in production (Vercel) vs localhost — causing faded/gray
-  backgrounds and muted gold colors.
+  Use regular @theme (not inline) so Tailwind generates CSS variables.
+  This is required for opacity modifiers like border-white/10 to work.
+  Tailwind v4 converts these to oklch internally, BUT we override them
+  below in a plain :root block that comes later in the cascade — so
+  our exact hex values win, and no color fading occurs in production.
 */
-@theme inline {
-  /* Core palette — exact hex values, NO oklch conversion */
+@theme {
   --color-deep-black: #000000;
   --color-charcoal: #0E0E0E;
   --color-soft-black: #111111;
@@ -15,20 +15,36 @@
   --color-muted: #B5B5B5;
   --color-gold: #D6A84F;
   --color-gold-hover: #E8C878;
-
-  /* Gold aliases */
   --color-gold-500: #c89b3c;
   --color-gold-400: #e6c46a;
   --color-gold-600: #b68a2e;
 
-  /* Typography */
   --font-serif: "Noto Serif", serif;
   --font-sans: "Manrope", sans-serif;
   --font-westeria: "Westeria", cursive;
 }
 
-/* Force base backgrounds and text — hardcoded hex, not CSS variables,
-   so nothing in the Tailwind pipeline can remap them */
+/*
+  OVERRIDE: Force exact hex values back onto the CSS variables.
+  Tailwind's @theme block converts them to oklch() in :root — which
+  causes faded/gray black and muted gold in production (Vercel).
+  This :root block appears after the @import in the final CSS bundle,
+  so it wins the cascade and restores the true hex values.
+*/
+:root {
+  --color-deep-black: #000000;
+  --color-charcoal: #0E0E0E;
+  --color-soft-black: #111111;
+  --color-white: #FFFFFF;
+  --color-muted: #B5B5B5;
+  --color-gold: #D6A84F;
+  --color-gold-hover: #E8C878;
+  --color-gold-500: #c89b3c;
+  --color-gold-400: #e6c46a;
+  --color-gold-600: #b68a2e;
+}
+
+/* Base styles — hardcoded hex, never CSS variables, immune to any remapping */
 html,
 body {
   background-color: #000000;
