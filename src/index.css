@@ -1,45 +1,29 @@
+/* ============================================================
+   Pure CSS utilities — NO @import "tailwindcss" here.
+   Tailwind is provided exclusively by styles/globals.css
+   ============================================================ */
 
-@import "tailwindcss";
-
-@theme {
-  --color-gold-500: #c89b3c;
-  --color-gold-400: #e6c46a;
-  --color-gold-600: #b68a2e;
-  --font-sans: "Margesh", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Margesh", ui-serif, Georgia, serif;
-  --font-westeria: "Westeria", cursive;
+/* Gold gradient helpers */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@layer base {
-  body {
-    @apply bg-[#050505] text-gray-200 antialiased font-sans;
-    margin: 0;
-    padding: 0;
-  }
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e);
 }
 
-@layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+.border-gradient-gold {
+  border-image: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e) 1;
+}
 
-  .bg-gradient-gold {
-    background: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e);
-  }
-
-  .border-gradient-gold {
-    border-image: linear-gradient(135deg, #c89b3c, #e6c46a, #b68a2e) 1;
-  }
-
-  /* Custom hide scrollbar for horizontal carousel */
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+/* Hide scrollbar — used by horizontal carousel */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
