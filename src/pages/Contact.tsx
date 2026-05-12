@@ -26,7 +26,7 @@ export const Contact = () => {
             
             {/* Primary CTA: WhatsApp */}
             <motion.a 
-              href="https://wa.me/880186407010" 
+              href="https://wa.me/8801864070100" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -38,20 +38,20 @@ export const Contact = () => {
               </div>
               <div className="text-left">
                 <span className="block text-white font-serif text-2xl mb-1">Message on WhatsApp</span>
-                <span className="text-muted text-sm uppercase tracking-wider">0186407010</span>
+                <span className="text-muted text-sm uppercase tracking-wider">01864070100</span>
               </div>
             </motion.a>
 
             {/* Phone */}
             <motion.a 
-              href="tel:0186407010"
+              href="tel:01864070100"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-charcoal border border-white/10 hover:border-gold/50 rounded-2xl p-8 flex flex-col items-center text-center transition-colors duration-300 group"
             >
               <Phone className="text-gold mb-4 group-hover:scale-110 transition-transform" size={32} />
               <span className="text-white font-serif text-xl mb-1">Direct Call</span>
-              <span className="text-muted">0186407010</span>
+              <span className="text-muted">01864070100</span>
             </motion.a>
 
             {/* Email */}

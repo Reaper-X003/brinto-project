@@ -78,9 +78,9 @@ export const Home = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-[28px] overflow-hidden aspect-[4/5] lg:aspect-square"
+              className="relative rounded-[28px] overflow-hidden aspect-[3/4]"
             >
-              <img src={images.about} alt="Washiou Brinto" className="w-full h-full object-cover" />
+              <img src={images.about} alt="Washiou Brinto" className="w-full h-full object-cover object-top" />
               <div className="absolute inset-0 border border-white/10 rounded-[28px]"></div>
             </motion.div>
             
